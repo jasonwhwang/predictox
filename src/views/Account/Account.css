@@ -1,0 +1,54 @@
+.account {
+  height: calc(100% - 50px);
+  width: 100%;
+  padding-top: 1rem;
+}
+.a-profile {
+  display: flex;
+  flex-direction: row;
+  width: 85%;
+  margin: 0 auto 0.5rem auto;
+}
+.a-tablemargin {
+  margin: 1.5rem 1rem 0rem 1rem;
+}
+.a-imgStyle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid black;
+  padding: 5px;
+  margin-right: 1rem;
+}
+.a-follow {
+  margin-top: 1rem;
+}
+.a-followbutton {
+  background-color: var(--blue);
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-radius: 20px;
+}
+.a-followbutton:hover {
+  color: white;
+}
+
+.a-tableheading {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.a-profilecenter {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .a-profile {
+    width: 60%;
+  }
+  .a-tablemargin {
+    margin: 1.5rem 25% 0rem 25%;
+  }
+}

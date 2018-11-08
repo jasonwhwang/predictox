@@ -1,0 +1,134 @@
+.users {
+  height: calc(100% - 50px);
+  overflow: auto;
+}
+
+.u-margin {
+  margin: 1rem;
+}
+
+.u-toggle {
+  display: flex;
+  flex-direction: row;
+}
+.u-togglesection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+}
+
+.predictionranking-buttons {
+  margin-top: 1rem;
+}
+.home-crypto {
+  font-weight: 600;
+}
+
+.home-buttons {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.button-marginleft {
+  margin-left: 1rem;
+}
+.bigbutton {
+  margin: 1rem 2rem 0 2rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.underline {
+  border-bottom: 2px solid var(--darkgray);
+}
+
+.text-middle {
+  text-align: center !important;
+}
+
+.img {
+  width: 100%;
+  height: 300px;
+}
+
+.predictionranking-table {
+  overflow: auto;
+}
+.predictionranking-table th {
+  white-space: nowrap;
+}
+.predictionranking-table td {
+  white-space: nowrap;
+}
+
+.tabs {
+  display: none;
+}
+
+.userselect {
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+  border: 1px solid transparent;
+  min-height: 30px;
+}
+.userselect:hover {
+  cursor: pointer;
+  color: var(--dark); 
+}
+
+input + .userselect {
+  transition: 500ms all;
+}
+input:checked + .userselect {
+  color: var(--dark);
+  border-bottom: 1px solid var(--darkgray);
+  transition: 500ms all;
+}
+
+.userselect-name {
+  vertical-align: middle;
+}
+
+
+.cryptoselect {
+  display: inline-block;
+  margin-right: 1rem;
+  font-weight: 500;
+  padding: 0 5px;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  min-height: 30px;
+  vertical-align: middle;
+}
+.cryptoselect:hover {
+  cursor: pointer;
+  color: var(--dark); 
+}
+
+input + .cryptoselect {
+  transition: 500ms all;
+}
+input:checked + .cryptoselect {
+  color: white;
+  background: var(--blue);
+  transition: 500ms all;
+}
+
+.cryptoselect-name {
+  vertical-align: middle;
+}
+
+@media only screen and (min-width: 600px) {
+  .u-margin {
+    margin: 0 15%;
+  }
+  .u-toggle {
+    margin: 0 30%;
+  }
+  .home-buttons {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
