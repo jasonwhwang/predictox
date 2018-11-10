@@ -1,7 +1,6 @@
 .account {
   height: calc(100% - 50px);
   width: 100%;
-  padding-top: 1rem;
 }
 .a-profile {
   display: flex;

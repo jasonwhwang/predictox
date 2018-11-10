@@ -4,7 +4,8 @@
   --black: #111111;
   --darkgray: #353535;
   --gray: #676771;
-  --lightgray: #f7f7f7;
+  --mediumgray: #b6b6bc;
+  --lightgray: #f1f1f3;
   --graybackground: #fbfbfb;
   --whitebackground: rgba(255, 255, 255, 0.95);
   --border: #e5e5e5;
@@ -44,7 +45,6 @@ button {
   background-color: transparent;
   color: var(--darkgray);
   font-family: 'Lato', sans-serif;
-  font-size: 1.5rem;
   cursor: pointer;
   text-align: center;
   transition: background 250ms ease-in-out,
@@ -60,6 +60,25 @@ button, select {
 }
 button, [type="button"], [type="reset"], [type="submit"] {
   -webkit-appearance: button;
+}
+
+.box-blue {
+  background-color: var(--blue) !important;
+}
+.box-spacer {
+  flex: 1;
+}
+.box-button-big {
+  background-color: var(--mediumgray);
+  color: white;
+  border-radius: 20px;
+  height: 40px;
+  min-width: 40px;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.box-button-blue:hover {
+  background-color: goldenrod;
 }
 
 @media only screen and (min-width: 600px) {

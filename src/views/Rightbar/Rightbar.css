@@ -1,4 +1,27 @@
+.rightbar-main {
+  /* height: 100%; */
+  height: calc(100% - 50px);
+  width: 100vw;
+  transition: 300ms all;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+.rightbar-right {
+  margin-right: -100vw;
+  right: 0;
+}
 .rightbar-contents {
   flex: 1;
   background-color: var(--whitebackground);
+}
+
+@media only screen and (min-width: 600px) {
+  .rightbar-main {
+    width: 40vw;
+  }
+  .rightbar-right {
+    margin-right: -40vw;
+  }
 }

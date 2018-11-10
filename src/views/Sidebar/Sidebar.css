@@ -1,23 +1,20 @@
 .sidebar-main {
-  height: 100%;
-  width: 250px;
-  transition: 200ms all;
+  /* height: 100%; */
+  height: calc(100% - 50px);
+  width: 300px;
+  transition: 300ms all;
   position: absolute;
   z-index: 1;
   display: flex;
   flex-direction: column;
 }
 .sidebar-left {
-  margin-left: -250px;
+  margin-left: -300px;
   left: 0;
-}
-.sidebar-right {
-  margin-right: -250px;
-  right: 0;
 }
 
 .sidebar-topPadding {
-  height: 50px;
+  /* height: 50px; */
   width: 100%;
 }
 .sidebar-contents {
@@ -29,20 +26,24 @@
 }
 
 .sidebar-item {
-  display: table;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   height: 50px;
   width: 100%;
 }
-.sidebar-text {
-  display: table-cell;
-  vertical-align: middle;
+.sidebar-icon {
+  height: 50px;
+  width: 60px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .sidebar-top {
-  font-size: 1.25rem;
-}
-
-.sidebar-textmargin {
-  margin-left: 1.75rem;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
 .sidebar-bottom {
@@ -50,11 +51,15 @@
   font-size: 1rem;
   margin-bottom: 1rem;
 }
-
-.s-marginright {
-  margin-right: 1rem;
+.sidebar-iconB {
+  height: 50px;
+  width: 30px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
 .s-logo {
   width: 15px;
   height: 15px;

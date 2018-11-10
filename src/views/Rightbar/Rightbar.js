@@ -14,12 +14,12 @@ const mapDispatchToProps = dispatch => ({
 class Rightbar extends React.Component {
   render() {
     return(
-      <div className="sidebar-main sidebar-right color" id="mainRightbar">
+      <div className="rightbar-main rightbar-right color" id="mainRightbar">
         <div className="sidebar-topPadding"></div>
         <div className="rightbar-contents">
           {
             this.props.headerTab ?
-              <div>Profile</div>
+              <div>Account</div>
               :
               <div>Notifications</div>
           }

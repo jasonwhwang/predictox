@@ -12,120 +12,31 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tab: 0,
-      crypto: 0
+      homeState: 0
     }
-  }
-
-  setTab(t) {
-    this.setState({ tab: t });
-  }
-  setCrypto(c) {
-    this.setState({ crypto: c });
   }
 
   render() {
     return (
       <div className="home">
-        <div className="h-chartloc">
-          <Chart />
-        </div>
+        {
+          this.state.homeState === 0 ?
+            <div className="h-chartloc"><Chart /></div>
+            :
+            null
+        }
+        
         <div className="h-coin">
           <div className="h-coinselect">
             <button className="h-coinselectflex">
               <span className="h-coinicon"><div className="h-coiniconflex"><i className="ion-logo-bitcoin"> </i></div></span>
               <span className="h-coinselecttext">Bitcoin</span>
-              <span className="h-arrowdown"><i className="ion-ios-arrow-down"> </i></span>
             </button>
-            <div className="">
-              <ul className="">
-                <li className="header-dropdowntext"><button>Bitcoin</button></li>
-                <li className="header-dropdowntext"><button>Ethereum</button></li>
-                <li className="header-dropdowntext"><button>Ripple</button></li>
-              </ul>
-            </div>
           </div>
           <div className="box-spacer"></div>
-          <div className="h-predict"><button className="h-addprediction"><div><i className="ion-ios-add" /> Prediction</div></button></div>
+          <div className="h-predict"><button className="box-button-big h-marginRight"><div><i className="ion-ios-list" /></div></button></div>
+          <div className="h-predict"><button className="box-button-big h-marginRight box-blue"><div><i className="ion-ios-add" /></div></button></div>
         </div>
-
-        <div className="h-details">
-          <div className="box-heading-1">November 7, 2018</div>
-          <div className="h-detailsnumbers">
-            <div className="h-detailsblock">
-              <div className="box-heading-big">$6500</div>
-              <div className="box-heading-mini">Average Prediction</div>
-            </div>
-            <div className="h-detailsblock">
-              <div className="box-heading-big">500</div>
-              <div className="box-heading-mini">Total Predictions</div>
-            </div>
-            <div className="h-detailsblock">
-              <div className="box-heading-big">$3500P</div>
-              <div className="box-heading-mini">Total Investment</div>
-            </div>
-          </div>
-        </div>
-
-
-        <div className="h-bottomsection h-bottomsectionmargin">
-          <div className="h-bottomflex">
-            <input className="tabs" id="homepredictions" type="radio" name="tabs" defaultChecked={true} />
-            <label className="userselect" htmlFor="homepredictions" onClick={() => this.setTab(0)}>
-              <span className="userselect-name">Predictions</span>
-            </label>
-          </div>
-          <div className="h-bottomflex">
-            <input className="tabs" id="homemodels" type="radio" name="tabs" />
-            <label className="userselect" htmlFor="homemodels" onClick={() => this.setTab(1)}>
-              <span className="userselect-name">Top Users</span>
-            </label>
-          </div>
-          <div className="h-bottomflex">
-            <input className="tabs" id="homeusers" type="radio" name="tabs" />
-            <label className="userselect" htmlFor="homeusers" onClick={() => this.setTab(2)}>
-              <span className="userselect-name">Discussions</span>
-            </label>
-          </div>
-        </div>
-
-        {
-          this.state.tab === 0 ?
-            <div className="predictionranking-table h-tablemargin">
-              <table className="">
-                <thead>
-                  <tr>
-                    <th className="uk-width-small text-middle">Prediction</th>
-                    <th className="uk-width-small text-middle"><button>Total <i className="ion-ios-arrow-down"></i></button></th>
-                    <th className="uk-width-small text-middle"><button>Odds <i className="ion-ios-arrow-down"></i></button></th>
-                    <th className="uk-width-small text-middle"><button>Stakes <i className="ion-ios-arrow-down"></i></button></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="text-middle">$7,000</td>
-                    <td className="text-middle">500</td>
-                    <td className="text-middle">3 : 5</td>
-                    <td className="text-middle">$1000</td>
-                  </tr>
-                  <tr>
-                    <td className="text-middle">$7,200</td>
-                    <td className="text-middle">400</td>
-                    <td className="text-middle">3 : 5</td>
-                    <td className="text-middle">$750</td>
-                  </tr>
-                  <tr>
-                    <td className="text-middle">$7,500</td>
-                    <td className="text-middle">350</td>
-                    <td className="text-middle">3 : 5</td>
-                    <td className="text-middle">$500</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            :
-            null
-        }
       </div>
     );
   }
