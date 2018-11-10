@@ -49,12 +49,12 @@
 .sidebar-bottom {
   width: 100%;
   font-size: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 .sidebar-iconB {
   height: 50px;
   width: 30px;
-  margin-left: 20px;
+  margin-left: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;

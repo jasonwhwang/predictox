@@ -32,6 +32,10 @@ class Chart extends React.Component {
             style={{
               data: { stroke: "#FFD700", strokeWidth: 5, opacity: 1 }
             }}
+            animate={{
+              duration: 2000,
+              onLoad: { duration: 2000 }
+            }}
             data={[
               { x: 0, y: 6300 },
               { x: 1, y: 6200 },
@@ -63,6 +67,10 @@ class Chart extends React.Component {
           <VictoryLine
             style={{
               data: { stroke: "#FFD700", strokeWidth: 5, strokeDasharray: [20, 30], opacity: 0.5 }
+            }}
+            animate={{
+              duration: 2000,
+              onLoad: { duration: 2000 }
             }}
             data={[
               { x: 7, y: 6300 },

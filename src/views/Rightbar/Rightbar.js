@@ -3,6 +3,8 @@ import './Rightbar.css';
 
 import { connect } from 'react-redux';
 
+import Account from '../Account/Account';
+
 const mapStateToProps = state => ({
   headerTab: state.common.headerTab
 });
@@ -19,7 +21,7 @@ class Rightbar extends React.Component {
         <div className="rightbar-contents">
           {
             this.props.headerTab ?
-              <div>Account</div>
+              <Account />
               :
               <div>Notifications</div>
           }

@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 import Header from './Header/Header';
 import Sidebar from './Sidebar/Sidebar';
 import Rightbar from './Rightbar/Rightbar';
 import Home from './Home/Home';
-import Users from './Users/Users';
+import Leaderboard from './Leaderboard/Leaderboard';
 import Account from './Account/Account';
+import Trending from './Trending/Trending';
+import About from './About/About';
 
 class App extends Component {
   render() {
@@ -18,8 +20,11 @@ class App extends Component {
         <Rightbar />
         <Switch>
           <Route exact path ="/" component={Home} />
-          <Route path ="/leaderboard" component={Users} />
+          <Route path="/trending" component={Trending} />
+          <Route path ="/leaderboard" component={Leaderboard} />
+          <Route path ="/about" component={About} />
           <Route path ="/account" component ={Account} />
+          <Redirect to="/" />
         </Switch>
       </div>
     );

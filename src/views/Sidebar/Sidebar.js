@@ -41,7 +41,7 @@ class Sidebar extends React.Component {
           <div className="sidebar-bottom">
             <Link to='/about' className="sidebar-item" onClick={this.toggle}>
               <div className="sidebar-iconB"><i className="ion-ios-information-circle-outline" /></div>
-              <div className="sidebar-text">About Predicto</div>
+              <div className="sidebar-text">About & Feedback</div>
             </Link>
             <Link to='/buy' className="sidebar-item" onClick={this.toggle}>
               <div className="sidebar-iconB"><img src={Logo} className='s-logo' alt='Predicto' /></div>

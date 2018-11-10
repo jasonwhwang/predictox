@@ -34,8 +34,8 @@ class Home extends React.Component {
             </button>
           </div>
           <div className="box-spacer"></div>
-          <div className="h-predict"><button className="box-button-big h-marginRight"><div><i className="ion-ios-list" /></div></button></div>
-          <div className="h-predict"><button className="box-button-big h-marginRight box-blue"><div><i className="ion-ios-add" /></div></button></div>
+          <div className="h-predict"><button className="box-button-big h-marginRight"><div><i className="ion-ios-list" aria-label="Graph & List"/></div></button></div>
+          <div className="h-predict"><button className="box-button-big h-marginRight box-blue"><div><i className="ion-ios-add" aria-label="Add Prediction"/></div></button></div>
         </div>
       </div>
     );

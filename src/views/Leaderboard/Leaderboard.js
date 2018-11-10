@@ -1,5 +1,5 @@
 import React from 'react';
-import './Users.css';
+import './Leaderboard.css';
 
 import { connect } from 'react-redux';
 
@@ -9,7 +9,7 @@ const mapStateToProps = state => ({
 
 });
 
-class Users extends React.Component {
+class Leaderboard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -143,4 +143,4 @@ class Users extends React.Component {
   }
 }
 
-export default connect(mapStateToProps)(Users);
+export default connect(mapStateToProps)(Leaderboard);
