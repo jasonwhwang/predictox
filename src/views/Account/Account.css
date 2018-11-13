@@ -1,23 +1,34 @@
 .account {
-  height: calc(100% - 50px);
+  height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .a-profile {
+  width: 100%;
+  height: 120px;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--graybackground);
+  border-bottom: 1px solid var(--border);
+  box-sizing: border-box;
+}
+.a-profileFlex {
   display: flex;
   flex-direction: row;
-  width: 85%;
-  margin: 0 auto 0.5rem auto;
 }
-.a-tablemargin {
-  margin: 1.5rem 1rem 0rem 1rem;
-}
+
 .a-imgStyle {
-  width: 80px;
-  height: 80px;
+  width: 65px;
+  height: 65px;
   border-radius: 50%;
   border: 3px solid black;
+  background-color: white;
   padding: 5px;
   margin-right: 1rem;
+}
+.a-profileText {
+  margin-top: 0.5rem;
+  flex: 1;
 }
 .a-follow {
   margin-top: 1rem;
@@ -32,22 +43,85 @@
 .a-followbutton:hover {
   color: white;
 }
-
-.a-tableheading {
-  font-size: 0.8rem;
-  font-weight: 600;
+.a-verticalAlign {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-height: calc(100% - 120px);
+}
+.a-iconsMargin {
+  margin-top: 1.5rem;
 }
 
-.a-profilecenter {
+.a-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.a-detailsSection {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  padding: 0 0.5rem;
+  align-items: center;
+}
+.a-detailsFlex {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0.5rem;
   text-align: center;
-  font-size: 0.8rem;
+  cursor: pointer;
+}
+.a-detailsToggle {
+  margin-top: 5px;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  transition: 400ms all;
+}
+#a-toggle0 {
+  background-color: var(--darkgray);
+}
+
+.a-predictions {
+  height: calc(100vh - 220px);
+  padding: 0 1rem;
+  overflow: auto;
+}
+.a-tableWidth {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.a-tableHeader {
+  margin-bottom: 0.5rem;
+}
+.a-tableBody {
+  width: 100%;
+}
+.a-tableSmall {
+  width: 50px;
+}
+.a-tableMedium {
+  width: 65px;
+}
+.a-cell {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-top: 1px solid var(--border);
 }
 
 @media only screen and (min-width: 600px) {
-  .a-profile {
-    width: 60%;
-  }
   .a-tablemargin {
     margin: 1.5rem 25% 0rem 25%;
+  }
+  .a-tableSmall {
+    width: 100px;
+  }
+  .a-tableMedium {
+    width: 150px;
   }
 }

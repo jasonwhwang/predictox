@@ -5,7 +5,9 @@
   flex-direction: row;
   align-items: stretch;
   justify-content: space-between;
-  background-color: var(--whitebackground);
+  background-color: white;
+  border-bottom: 1px solid var(--border);
+  box-sizing: border-box;
 }
 .header-toggle {
   width: 60px;

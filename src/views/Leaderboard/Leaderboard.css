@@ -39,26 +39,12 @@
   font-weight: 500;
 }
 .underline {
-  border-bottom: 2px solid var(--darkgray);
-}
-
-.text-middle {
-  text-align: center !important;
+  border-bottom: 1px solid var(--darkgray);
 }
 
 .img {
   width: 100%;
   height: 300px;
-}
-
-.predictionranking-table {
-  overflow: auto;
-}
-.predictionranking-table th {
-  white-space: nowrap;
-}
-.predictionranking-table td {
-  white-space: nowrap;
 }
 
 .tabs {

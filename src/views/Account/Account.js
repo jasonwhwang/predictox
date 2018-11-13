@@ -12,6 +12,8 @@ class Account extends React.Component {
   }
 
   setTab(t) {
+    document.getElementById("a-toggle" + this.state.tab).style.backgroundColor = "transparent";
+    document.getElementById("a-toggle" + t).style.backgroundColor = "var(--darkgray)";
     this.setState({ tab: t });
   }
   setCrypto(c) {
@@ -22,94 +24,111 @@ class Account extends React.Component {
     return (
       <div className="account">
         <div className="a-profile">
-          <img className="a-imgStyle" src={Logo} alt='Profile' />
-          <div className="a-profileText">
-            <div className="box-heading-big">Username</div>
-            <div className="box-heading-mini">Member Status</div>
-          </div>
-          <div className="box-spacer"></div>
-          <div className="a-follow">
-            <button className="a-followbutton">Follow</button>
-          </div>
-        </div>
-
-        <div className="a-profile">
-          <div className="box-spacer">
-            <div className="a-profilecenter box-heading-1">85%</div>
-            <div className="a-profilecenter">Accuracy</div>
-          </div>
-          <div className="box-spacer">
-            <div className="a-profilecenter box-heading-1">1800%</div>
-            <div className="a-profilecenter">Payout</div>
-          </div>
-          <div className="box-spacer">
-            <div className="a-profilecenter box-heading-1">35</div>
-            <div className="a-profilecenter">Global Rank</div>
-          </div>
-        </div>
-
-        <div className="h-bottomsection a-tablemargin">
-          <div className="h-bottomflex">
-            <input className="tabs" id="userpredictions" type="radio" name="tabs" defaultChecked={true} />
-            <label className="userselect" htmlFor="userpredictions" onClick={() => this.setTab(0)}>
-              <span className="userselect-name">80 <span className="a-tableheading">Predictions</span></span>
-            </label>
-          </div>
-          <div className="h-bottomflex">
-            <input className="tabs" id="followers" type="radio" name="tabs" />
-            <label className="userselect" htmlFor="followers" onClick={() => this.setTab(1)}>
-              <span className="userselect-name">200 <span className="a-tableheading">Followers</span></span>
-            </label>
-          </div>
-          <div className="h-bottomflex">
-            <input className="tabs" id="following" type="radio" name="tabs" />
-            <label className="userselect" htmlFor="following" onClick={() => this.setTab(2)}>
-              <span className="userselect-name">15 <span className="a-tableheading">Following</span></span>
-            </label>
-          </div>
-        </div>
-
-        {
-          this.state.tab === 0 ?
-            <div className="predictionranking-table h-tablemargin">
-              <table className="uk-table uk-table-hover uk-table-middle">
-                <thead>
-                  <tr>
-                  <th className="uk-width-small text-middle">Date</th>
-                  <th className="uk-width-small text-middle">Name</th>
-                    <th className="uk-width-small text-middle">Prediction</th>
-                    <th className="uk-width-small text-middle"><button>Accuracy <i className="ion-ios-arrow-down"></i></button></th>
-                    <th className="uk-width-small text-middle"><button>Payout <i className="ion-ios-arrow-down"></i></button></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                  <td className="text-middle">11/7</td>
-                  <td className="text-middle">BTC</td>
-                    <td className="text-middle">$7,000</td>
-                    <td className="text-middle">85%</td>
-                    <td className="text-middle">20%</td>
-                  </tr>
-                  <tr>
-                  <td className="text-middle">11/2</td>
-                  <td className="text-middle">BTC</td>
-                    <td className="text-middle">$7,200</td>
-                    <td className="text-middle">60%</td>
-                    <td className="text-middle">35%</td>
-                  </tr>
-                  <tr>
-                  <td className="text-middle">11/1</td>
-                  <td className="text-middle">BTC</td>
-                    <td className="text-middle">$7,500</td>
-                    <td className="text-middle">95%</td>
-                    <td className="text-middle">10%</td>
-                  </tr>
-                </tbody>
-              </table>
+          <div className="a-profileFlex box-margin-bottom-small">
+            <img className="a-imgStyle" src={Logo} alt='Profile' />
+            <div className="a-profileText">
+              <div className="box-heading-1">Username</div>
+              <div className="box-text-3 box-textCaps box-textBold box-textGray">Legendary</div>
+              <div className="a-iconsMargin a-verticalAlign box-textGray">
+                <i className="ion-md-locate" /><span className="box-text-3 box-textBold box-margin-left-space">85</span>
+                <i className="ion-md-arrow-round-up box-margin-left-medium" /><span className="box-text-3 box-textBold box-margin-left-space">1800<span className="box-text-3">%</span></span>
+                <i className="ion-ios-ribbon box-margin-left-medium" /><span className="box-text-3 box-textBold box-margin-left-space">35</span>
+              </div>
             </div>
-            :
-            null
-        }
+            <div className="a-follow">
+              <button className="a-followbutton">Follow</button>
+            </div>
+          </div>
+        </div>
+
+        <div className="a-details">
+          <div className="a-detailsSection">
+            <div className="a-detailsFlex">
+              <div className="" onClick={() => this.setTab(0)}>
+                <span>80 </span><span className="box-heading-3">Predictions</span>
+                <div className="a-detailsToggle" id="a-toggle0"></div>
+              </div>
+            </div>
+            <div className="a-detailsFlex">
+              <div className="" onClick={() => this.setTab(1)}>
+                <span>20 </span><span className="box-heading-3">Discussions</span>
+                <div className="a-detailsToggle" id="a-toggle1"></div>
+              </div>
+            </div>
+            <div className="a-detailsFlex">
+              <div className="" onClick={() => this.setTab(2)}>
+                <span>15 </span><span className="box-heading-3">Following</span>
+                <div className="a-detailsToggle" id="a-toggle2"></div>
+              </div>
+            </div>
+          </div>
+
+          {
+            this.state.tab === 0 ?
+              <div className="a-predictions">
+                <div className="a-tableWidth box-textCenter a-tableHeader">
+                  <div className="a-tableSmall box-textGray">Date</div>
+                  <div className="a-tableSmall box-textGray">Name</div>
+                  <div className="box-spacer box-textGray">Prediction</div>
+                  <div className="a-tableMedium box-textGray">Accuracy</div>
+                  <div className="a-tableMedium box-textGray">Payout</div>
+                </div>
+                <div className="a-tableBody">
+                  <div className="a-tableWidth box-textCenter a-cell">
+                    <div className="a-tableSmall box-text-3">11/7</div>
+                    <div className="a-tableSmall box-textBold">BTC</div>
+                    <div className="box-spacer box-heading-2">$7,000</div>
+                    <div className="a-tableMedium box-heading-2">85</div>
+                    <div className="a-tableMedium box-heading-2">20%</div>
+                  </div>
+                  <div className="a-tableWidth box-textCenter a-cell">
+                    <div className="a-tableSmall box-text-3">11/7</div>
+                    <div className="a-tableSmall box-textBold">BTC</div>
+                    <div className="box-spacer box-heading-2">$7,000</div>
+                    <div className="a-tableMedium box-heading-2">85</div>
+                    <div className="a-tableMedium box-heading-2">20%</div>
+                  </div>
+                  <div className="a-tableWidth box-textCenter a-cell">
+                    <div className="a-tableSmall box-text-3">11/7</div>
+                    <div className="a-tableSmall box-textBold">BTC</div>
+                    <div className="box-spacer box-heading-2">$7,000</div>
+                    <div className="a-tableMedium box-heading-2">85</div>
+                    <div className="a-tableMedium box-heading-2">20%</div>
+                  </div>
+                  <div className="a-tableWidth box-textCenter a-cell">
+                    <div className="a-tableSmall box-text-3">11/7</div>
+                    <div className="a-tableSmall box-textBold">BTC</div>
+                    <div className="box-spacer box-heading-2">$7,000</div>
+                    <div className="a-tableMedium box-heading-2">85</div>
+                    <div className="a-tableMedium box-heading-2">20%</div>
+                  </div>
+                  <div className="a-tableWidth box-textCenter a-cell">
+                    <div className="a-tableSmall box-text-3">11/7</div>
+                    <div className="a-tableSmall box-textBold">BTC</div>
+                    <div className="box-spacer box-heading-2">$7,000</div>
+                    <div className="a-tableMedium box-heading-2">85</div>
+                    <div className="a-tableMedium box-heading-2">20%</div>
+                  </div>
+                  <div className="a-tableWidth box-textCenter a-cell">
+                    <div className="a-tableSmall box-text-3">11/7</div>
+                    <div className="a-tableSmall box-textBold">BTC</div>
+                    <div className="box-spacer box-heading-2">$7,000</div>
+                    <div className="a-tableMedium box-heading-2">85</div>
+                    <div className="a-tableMedium box-heading-2">20%</div>
+                  </div>
+                  <div className="a-tableWidth box-textCenter a-cell">
+                    <div className="a-tableSmall box-text-3">11/7</div>
+                    <div className="a-tableSmall box-textBold">BTC</div>
+                    <div className="box-spacer box-heading-2">$7,000</div>
+                    <div className="a-tableMedium box-heading-2">85</div>
+                    <div className="a-tableMedium box-heading-2">20%</div>
+                  </div>
+                </div>
+              </div>
+              :
+              null
+          }
+        </div>
       </div>
     );
   }

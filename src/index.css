@@ -74,27 +74,61 @@ button, [type="button"], [type="reset"], [type="submit"] {
   border-radius: 20px;
   height: 40px;
   min-width: 40px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.2rem;
 }
-.box-button-blue:hover {
-  background-color: goldenrod;
+.box-heading-1 {
+  font-size: 1.5rem;
+  font-weight: 700;
 }
-
-
-.fade-enter {
-  opacity: 0;
-  z-index: 1;
+.box-heading-2 {
+  font-size: 1.2rem;
+  font-weight: 700;
 }
-.fade-enter .fade-enter-active {
-  opacity: 1;
-  transition: opacity 250ms ease-in;
+.box-heading-3 {
+  font-size: 0.8rem;
+  font-weight: 700;
 }
-
+.box-text-1 {
+  font-size: 1.5rem;
+}
+.box-text-2 {
+  font-size: 1.2rem;
+}
+.box-text-3 {
+  font-size: 0.8rem;
+}
+.box-textCenter {
+  text-align: center;
+}
+.box-textBold {
+  font-weight: 700;
+}
+.box-textCaps {
+  text-transform: uppercase;
+}
+.box-textGray {
+  color: var(--gray);
+}
+.box-margin-top-medium {
+  margin-top: 1rem;
+}
+.box-margin-top-small {
+  margin-top: 0.75rem;
+}
+.box-margin-bottom-small {
+  margin-bottom: 0.75rem;
+}
+.box-margin-left-medium {
+  margin-left: 1rem;
+}
+.box-margin-left-space {
+  margin-left: 0.2rem;
+}
 
 @media only screen and (min-width: 600px) {
   /* Scrollbar Styles */
-  div::-webkit-scrollbar-track
+  /* div::-webkit-scrollbar-track
   {
     width: 10px;
     margin: 50px 0 2px 0;
@@ -109,5 +143,5 @@ button, [type="button"], [type="reset"], [type="submit"] {
     border-radius: 5px;
     background-color: var(--gray);
     border-right: 2px solid white;
-  }
+  } */
 }

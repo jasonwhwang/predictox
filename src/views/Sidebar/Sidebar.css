@@ -19,6 +19,8 @@
 }
 .sidebar-contents {
   background-color: var(--whitebackground);
+  border-right: 1px solid var(--border);
+  box-sizing: border-box;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -46,6 +48,13 @@
   font-weight: 600;
 }
 
+.sidebar-itemB {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+}
 .sidebar-bottom {
   width: 100%;
   font-size: 1rem;

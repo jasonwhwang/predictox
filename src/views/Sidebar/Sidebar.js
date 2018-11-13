@@ -24,7 +24,7 @@ class Sidebar extends React.Component {
         <div className="sidebar-topPadding"></div>
         <div className="sidebar-contents">
           <div className="sidebar-top">
-            <Link to='/' className="sidebar-item" onClick={this.toggle}>
+            <Link to='/' className="sidebar-item box-margin-top-medium" onClick={this.toggle}>
               <div className="sidebar-icon"><i className="ion-ios-trending-up" /></div>
               <div className="sidebar-text">Predictions</div>
             </Link>
@@ -39,11 +39,11 @@ class Sidebar extends React.Component {
           </div>
 
           <div className="sidebar-bottom">
-            <Link to='/about' className="sidebar-item" onClick={this.toggle}>
+            <Link to='/about' className="sidebar-itemB" onClick={this.toggle}>
               <div className="sidebar-iconB"><i className="ion-ios-information-circle-outline" /></div>
               <div className="sidebar-text">About & Feedback</div>
             </Link>
-            <Link to='/buy' className="sidebar-item" onClick={this.toggle}>
+            <Link to='/buy' className="sidebar-itemB" onClick={this.toggle}>
               <div className="sidebar-iconB"><img src={Logo} className='s-logo' alt='Predicto' /></div>
               <div className="sidebar-text">Buy Predicto</div>
             </Link>
