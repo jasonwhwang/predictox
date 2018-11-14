@@ -122,8 +122,14 @@ button, [type="button"], [type="reset"], [type="submit"] {
 .box-margin-left-medium {
   margin-left: 1rem;
 }
+.box-margin-left-small {
+  margin-left: 0.5rem;
+}
 .box-margin-left-space {
   margin-left: 0.2rem;
+}
+.box-margin-right-small {
+  margin-right: 0.5rem;
 }
 
 @media only screen and (min-width: 600px) {

@@ -1,6 +1,9 @@
 import React from 'react';
 import './Account.css';
 import Logo from '../../img/predicto.png';
+import AccountPredictions from './AccountComponents/AccountPredictions';
+import AccountFollowings from './AccountComponents/AccountFollowings';
+import AccountDiscussions from './AccountComponents/AccountDiscussions';
 
 class Account extends React.Component {
   constructor(props) {
@@ -25,7 +28,7 @@ class Account extends React.Component {
       <div className="account">
         <div className="a-profile">
           <div className="a-profileFlex box-margin-bottom-small">
-            <img className="a-imgStyle" src={Logo} alt='Profile' />
+            <div className="a-profileImg"><img className="a-imgStyle" src={Logo} alt='Profile' /></div>
             <div className="a-profileText">
               <div className="box-heading-1">Username</div>
               <div className="box-text-3 box-textCaps box-textBold box-textGray">Legendary</div>
@@ -65,66 +68,19 @@ class Account extends React.Component {
 
           {
             this.state.tab === 0 ?
-              <div className="a-predictions">
-                <div className="a-tableWidth box-textCenter a-tableHeader">
-                  <div className="a-tableSmall box-textGray">Date</div>
-                  <div className="a-tableSmall box-textGray">Name</div>
-                  <div className="box-spacer box-textGray">Prediction</div>
-                  <div className="a-tableMedium box-textGray">Accuracy</div>
-                  <div className="a-tableMedium box-textGray">Payout</div>
-                </div>
-                <div className="a-tableBody">
-                  <div className="a-tableWidth box-textCenter a-cell">
-                    <div className="a-tableSmall box-text-3">11/7</div>
-                    <div className="a-tableSmall box-textBold">BTC</div>
-                    <div className="box-spacer box-heading-2">$7,000</div>
-                    <div className="a-tableMedium box-heading-2">85</div>
-                    <div className="a-tableMedium box-heading-2">20%</div>
-                  </div>
-                  <div className="a-tableWidth box-textCenter a-cell">
-                    <div className="a-tableSmall box-text-3">11/7</div>
-                    <div className="a-tableSmall box-textBold">BTC</div>
-                    <div className="box-spacer box-heading-2">$7,000</div>
-                    <div className="a-tableMedium box-heading-2">85</div>
-                    <div className="a-tableMedium box-heading-2">20%</div>
-                  </div>
-                  <div className="a-tableWidth box-textCenter a-cell">
-                    <div className="a-tableSmall box-text-3">11/7</div>
-                    <div className="a-tableSmall box-textBold">BTC</div>
-                    <div className="box-spacer box-heading-2">$7,000</div>
-                    <div className="a-tableMedium box-heading-2">85</div>
-                    <div className="a-tableMedium box-heading-2">20%</div>
-                  </div>
-                  <div className="a-tableWidth box-textCenter a-cell">
-                    <div className="a-tableSmall box-text-3">11/7</div>
-                    <div className="a-tableSmall box-textBold">BTC</div>
-                    <div className="box-spacer box-heading-2">$7,000</div>
-                    <div className="a-tableMedium box-heading-2">85</div>
-                    <div className="a-tableMedium box-heading-2">20%</div>
-                  </div>
-                  <div className="a-tableWidth box-textCenter a-cell">
-                    <div className="a-tableSmall box-text-3">11/7</div>
-                    <div className="a-tableSmall box-textBold">BTC</div>
-                    <div className="box-spacer box-heading-2">$7,000</div>
-                    <div className="a-tableMedium box-heading-2">85</div>
-                    <div className="a-tableMedium box-heading-2">20%</div>
-                  </div>
-                  <div className="a-tableWidth box-textCenter a-cell">
-                    <div className="a-tableSmall box-text-3">11/7</div>
-                    <div className="a-tableSmall box-textBold">BTC</div>
-                    <div className="box-spacer box-heading-2">$7,000</div>
-                    <div className="a-tableMedium box-heading-2">85</div>
-                    <div className="a-tableMedium box-heading-2">20%</div>
-                  </div>
-                  <div className="a-tableWidth box-textCenter a-cell">
-                    <div className="a-tableSmall box-text-3">11/7</div>
-                    <div className="a-tableSmall box-textBold">BTC</div>
-                    <div className="box-spacer box-heading-2">$7,000</div>
-                    <div className="a-tableMedium box-heading-2">85</div>
-                    <div className="a-tableMedium box-heading-2">20%</div>
-                  </div>
-                </div>
-              </div>
+              <AccountPredictions />
+              :
+              null
+          }
+          {
+            this.state.tab === 1 ?
+              <AccountDiscussions />
+              :
+              null
+          }
+          {
+            this.state.tab === 2 ?
+              <AccountFollowings />
               :
               null
           }
