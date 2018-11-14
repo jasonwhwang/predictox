@@ -1,6 +1,7 @@
 const defaultState = {
   requests: null,
-  headerTab: 0
+  headerTab: 0,
+  chatTab: 0
 }
 
 export default (state = defaultState, action) => {
@@ -19,6 +20,11 @@ export default (state = defaultState, action) => {
       return {
         ...state,
         headerTab: action.headerTab
+      }
+    case 'CHAT_TAB':
+      return {
+        ...state,
+        chatTab: action.chatTab
       }
     default:
       return state;

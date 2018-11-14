@@ -1,0 +1,7 @@
+.chat {
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  z-index: 3;
+  padding: 0;
+}
