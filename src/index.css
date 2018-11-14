@@ -20,6 +20,7 @@ html, body {
   -webkit-tap-highlight-color: transparent;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  overscroll-behavior-y: contain;
 }
 #root {
   height: 100%;

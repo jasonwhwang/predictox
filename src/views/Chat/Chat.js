@@ -1,14 +1,29 @@
 import React from 'react';
 import './Chat.css';
+import WidgetBot from '@widgetbot/react-embed';
 
-const Chat = (props) => {
-  let height = window.innerHeight - 87 > 800 ? window.innerHeight - 137 : window.innerHeight - 90;
-  let width = window.innerWidth - 6 > 600 ? 600 : window.innerWidth-6;
-  return(
-    <div className="chat">
-      <iframe src="https://cl2.widgetbot.io/channels/512149626128957450/512149626128957454" title="Predicto Chat" height={height} width={width}></iframe>
-    </div>
-  );
+class Chat extends React.Component {
+  render() {
+    let height = window.innerHeight > 900 ? window.innerHeight - 130 : window.innerHeight - 80;
+    let width = window.innerWidth > 600 ? 600 : window.innerWidth;
+    return (
+      <div className="chat">
+        <WidgetBot
+          server="512149626128957450"
+          channel="512149626128957454"
+          shard="https://cl2.widgetbot.io"
+          height={height}
+          width={width}
+          onAPI={(api) => {
+            api.on('signIn', user => {
+              // console.log(`Guest signed in as ${user.name}`, user);
+              // api.emit('sendMessage', 'Hello world');
+            })
+          }}
+        />
+      </div>
+    );
+  }
 }
 
 export default Chat;
