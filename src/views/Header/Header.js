@@ -17,14 +17,12 @@ const mapDispatchToProps = dispatch => ({
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.toggleMessages = this.toggleMessages.bind(this);
-    this.toggleNotifications = this.toggleNotifications.bind(this);
-    this.toggleAccount = this.toggleAccount.bind(this);
+    this.toggleHeader = this.toggleHeader.bind(this);
   }
 
   toggleSidebar() {
-    if (document.getElementById("mainSidebar").style.marginLeft === "0px") {
-      document.getElementById("mainSidebar").style.marginLeft = "-300px";
+    if (document.getElementById("mainSidebar").style.transform === "translateX(0px)") {
+      document.getElementById("mainSidebar").style.transform = "translateX(-300px)";
     } else {
       if (document.getElementById("mainRightbar").style.marginRight === "0px") {
         if (window.innerWidth > 600) {
@@ -33,60 +31,22 @@ class Header extends React.Component {
           document.getElementById("mainRightbar").style.marginRight = "-100vw";
         }
       }
-      document.getElementById("mainSidebar").style.marginLeft = "0px";
+      document.getElementById("mainSidebar").style.transform = "translateX(0px)";
     }
   }
 
-  toggleMessages() {
+  toggleHeader(val) {
     if (document.getElementById("mainRightbar").style.marginRight === "0px") {
-      if (this.props.headerTab === 2) {
+      if (this.props.headerTab === val) {
         if (window.innerWidth > 600) {
           document.getElementById("mainRightbar").style.marginRight = "-40vw";
         } else {
           document.getElementById("mainRightbar").style.marginRight = "-100vw";
         }
       }
-      this.props.changeHeaderTab(2);
+      this.props.changeHeaderTab(val);
     } else {
-      this.props.changeHeaderTab(2);
-      if (document.getElementById("mainSidebar").style.marginLeft === "0px") {
-        document.getElementById("mainSidebar").style.marginLeft = "-100vw";
-      }
-      document.getElementById("mainRightbar").style.marginRight = "0px";
-    }
-  }
-
-  toggleNotifications() {
-    if (document.getElementById("mainRightbar").style.marginRight === "0px") {
-      if (this.props.headerTab === 0) {
-        if (window.innerWidth > 600) {
-          document.getElementById("mainRightbar").style.marginRight = "-40vw";
-        } else {
-          document.getElementById("mainRightbar").style.marginRight = "-100vw";
-        }
-      }
-      this.props.changeHeaderTab(0);
-    } else {
-      this.props.changeHeaderTab(0);
-      if (document.getElementById("mainSidebar").style.marginLeft === "0px") {
-        document.getElementById("mainSidebar").style.marginLeft = "-100vw";
-      }
-      document.getElementById("mainRightbar").style.marginRight = "0px";
-    }
-  }
-
-  toggleAccount() {
-    if (document.getElementById("mainRightbar").style.marginRight === "0px") {
-      if (this.props.headerTab === 1) {
-        if (window.innerWidth > 600) {
-          document.getElementById("mainRightbar").style.marginRight = "-40vw";
-        } else {
-          document.getElementById("mainRightbar").style.marginRight = "-100vw";
-        }
-      }
-      this.props.changeHeaderTab(1);
-    } else {
-      this.props.changeHeaderTab(1);
+      this.props.changeHeaderTab(val);
       if (document.getElementById("mainSidebar").style.marginLeft === "0px") {
         document.getElementById("mainSidebar").style.marginLeft = "-100vw";
       }
@@ -107,13 +67,13 @@ class Header extends React.Component {
         </Link>
 
         <div className="header-section">
-          <div className="header-icon" onClick={this.toggleMessages}>
-            <button className="ion-ios-chatbubbles header-iconsize" aria-label="Notifications" />
+          <div className="header-icon" onClick={() => {this.toggleHeader(2)}}>
+            <button className="ion-ios-chatbubbles header-iconsize" aria-label="Chat" />
           </div>
-          <div className="header-icon" onClick={this.toggleNotifications}>
+          <div className="header-icon" onClick={() => {this.toggleHeader(0)}}>
             <button className="ion-ios-notifications header-iconsize" aria-label="Notifications" />
           </div>
-          <div className="header-icon box-margin-right-small" onClick={this.toggleAccount}>
+          <div className="header-icon box-margin-right-small" onClick={() => {this.toggleHeader(1)}}>
             <button className="ion-ios-contact header-iconsize" aria-label="Profile" />
           </div>
         </div>

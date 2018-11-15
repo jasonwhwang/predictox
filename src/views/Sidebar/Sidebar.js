@@ -11,17 +11,16 @@ const mapStateToProps = state => ({
 
 class Sidebar extends React.Component {
   toggle() {
-    if (document.getElementById("mainSidebar").style.marginLeft === "0px") {
-      document.getElementById("mainSidebar").style.marginLeft = "-300px";
+    if (document.getElementById("mainSidebar").style.transform === "translateX(0px)") {
+      document.getElementById("mainSidebar").style.transform = "translateX(-300px)";
     } else {
-      document.getElementById("mainSidebar").style.marginLeft = "0px";
+      document.getElementById("mainSidebar").style.transform = "translateX(0px)";
     }
   }
 
   render() {
     return (
-      <div className="sidebar-main sidebar-left" id="mainSidebar">
-        <div className="sidebar-topPadding"></div>
+      <div className="sidebar-main" id="mainSidebar">
         <div className="sidebar-contents">
           <div className="sidebar-top">
             <Link to='/' className="sidebar-item box-margin-top-medium" onClick={this.toggle}>
