@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import configureStore from './reducers/store';
+import HttpsRedirect from 'react-https-redirect';
 // import { PersistGate } from 'redux-persist/integration/react';
 import './index.css';
 
@@ -16,7 +17,9 @@ ReactDOM.render(
   <Provider store={store}>
     {/* <PersistGate loading={<div className="signal"></div>} persistor={persistor}> */}
       <BrowserRouter>
-        <App />
+        <HttpsRedirect>
+          <App />
+        </HttpsRedirect>
       </BrowserRouter>
     {/* </PersistGate> */}
   </Provider>,
