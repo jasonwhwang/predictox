@@ -23,7 +23,9 @@ html, body {
   overscroll-behavior-y: contain;
 }
 #root {
+  position: fixed;
   height: 100%;
+  width: 100%;
 }
 .root-app {
   height: 100%;
