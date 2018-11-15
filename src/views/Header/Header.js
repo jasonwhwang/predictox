@@ -17,6 +17,7 @@ const mapDispatchToProps = dispatch => ({
 class Header extends React.Component {
   constructor(props) {
     super(props);
+    this.toggleMessages = this.toggleMessages.bind(this);
     this.toggleNotifications = this.toggleNotifications.bind(this);
     this.toggleAccount = this.toggleAccount.bind(this);
   }
@@ -33,6 +34,25 @@ class Header extends React.Component {
         }
       }
       document.getElementById("mainSidebar").style.marginLeft = "0px";
+    }
+  }
+
+  toggleMessages() {
+    if (document.getElementById("mainRightbar").style.marginRight === "0px") {
+      if (this.props.headerTab === 2) {
+        if (window.innerWidth > 600) {
+          document.getElementById("mainRightbar").style.marginRight = "-40vw";
+        } else {
+          document.getElementById("mainRightbar").style.marginRight = "-100vw";
+        }
+      }
+      this.props.changeHeaderTab(2);
+    } else {
+      this.props.changeHeaderTab(2);
+      if (document.getElementById("mainSidebar").style.marginLeft === "0px") {
+        document.getElementById("mainSidebar").style.marginLeft = "-100vw";
+      }
+      document.getElementById("mainRightbar").style.marginRight = "0px";
     }
   }
 
@@ -87,11 +107,13 @@ class Header extends React.Component {
         </Link>
 
         <div className="header-section">
+          <div className="header-icon" onClick={this.toggleMessages}>
+            <button className="ion-ios-chatbubbles header-iconsize" aria-label="Notifications" />
+          </div>
           <div className="header-icon" onClick={this.toggleNotifications}>
             <button className="ion-ios-notifications header-iconsize" aria-label="Notifications" />
           </div>
-
-          <div className="header-icon" onClick={this.toggleAccount}>
+          <div className="header-icon box-margin-right-small" onClick={this.toggleAccount}>
             <button className="ion-ios-contact header-iconsize" aria-label="Profile" />
           </div>
         </div>

@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 
 import Account from '../Account/Account';
 import Notifications from '../Notifications/Notifications';
+import Chat from '../Chat/Chat';
 
 const mapStateToProps = state => ({
   headerTab: state.common.headerTab
@@ -21,10 +22,22 @@ class Rightbar extends React.Component {
         <div className="sidebar-topPadding"></div>
         <div className="rightbar-contents">
           {
-            this.props.headerTab ?
+            this.props.headerTab === 1 ?
               <Account />
               :
+              null
+          }
+          {
+            this.props.headerTab === 0 ?
               <Notifications />
+              :
+              null
+          }
+          {
+            this.props.headerTab === 2 ?
+              <Chat />
+              :
+              null
           }
         </div>
       </div>

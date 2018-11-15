@@ -4,8 +4,8 @@ import WidgetBot from '@widgetbot/react-embed';
 
 class Chat extends React.Component {
   render() {
-    let height = window.innerHeight > 900 ? window.innerHeight - 130 : window.innerHeight - 80;
-    let width = window.innerWidth > 600 ? 600 : window.innerWidth;
+    let height = window.innerWidth > 600 ? window.innerHeight - 50 : window.innerHeight - 50;
+    let width = window.innerWidth > 600 ? window.innerWidth*4/10 : window.innerWidth;
     return (
       <div className="chat">
         <WidgetBot

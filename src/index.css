@@ -15,10 +15,11 @@
 
 html, body {
   margin: 0;
+  padding: 0;
   height: 100%;
+  min-height: 100vh;
   font-family: 'Lato', sans-serif;
   -webkit-tap-highlight-color: transparent;
-  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   overscroll-behavior-y: contain;
 }
@@ -44,12 +45,15 @@ button {
   border: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   background-color: transparent;
   color: var(--darkgray);
   font-family: 'Lato', sans-serif;
   cursor: pointer;
-  text-align: center;
   transition: background 250ms ease-in-out,
               transform 150ms ease;
   -webkit-appearance: none;
