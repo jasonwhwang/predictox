@@ -9,7 +9,7 @@ class AccountFollowings extends React.Component {
           <div className="a-followingImgWrapper"><img className="a-followingImg" src={Logo} alt='Profile' /></div>
           <div className="a-fName box-spacer">
             <div className="box-text-2 box-textBold">Username</div>
-            <div className="box-text-3 box-textCaps box-textBold box-textGray">Legendary</div>
+            <div className="box-text-3 box-textCaps box-textBold box-textGray">Legendary <i className="ion-ios-ribbon box-margin-left-small" /> 35</div>
           </div>
           <div className="box-text-3 box-textGray box-margin-right-small">active<span className="box-textBold box-margin-left-small">8 hrs ago</span></div>
         </div>
@@ -17,7 +17,7 @@ class AccountFollowings extends React.Component {
           <div className="a-followingImgWrapper"><img className="a-followingImg" src={Logo} alt='Profile' /></div>
           <div className="a-fName box-spacer">
             <div className="box-text-2 box-textBold">Username</div>
-            <div className="box-text-3 box-textCaps box-textBold box-textGray">Legendary</div>
+            <div className="box-text-3 box-textCaps box-textBold box-textGray">Legendary <i className="ion-ios-ribbon box-margin-left-small" /> 35</div>
           </div>
           <div className="box-text-3 box-textGray box-margin-right-small">active<span className="box-textBold box-margin-left-small">8 hrs ago</span></div>
         </div>
@@ -25,7 +25,7 @@ class AccountFollowings extends React.Component {
           <div className="a-followingImgWrapper"><img className="a-followingImg" src={Logo} alt='Profile' /></div>
           <div className="a-fName box-spacer">
             <div className="box-text-2 box-textBold">Username</div>
-            <div className="box-text-3 box-textCaps box-textBold box-textGray">Legendary</div>
+            <div className="box-text-3 box-textCaps box-textBold box-textGray">Legendary <i className="ion-ios-ribbon box-margin-left-small" /> 35</div>
           </div>
           <div className="box-text-3 box-textGray box-margin-right-small">active<span className="box-textBold box-margin-left-small">8 hrs ago</span></div>
         </div>
@@ -33,7 +33,7 @@ class AccountFollowings extends React.Component {
           <div className="a-followingImgWrapper"><img className="a-followingImg" src={Logo} alt='Profile' /></div>
           <div className="a-fName box-spacer">
             <div className="box-text-2 box-textBold">Username</div>
-            <div className="box-text-3 box-textCaps box-textBold box-textGray">Legendary</div>
+            <div className="box-text-3 box-textCaps box-textBold box-textGray">Legendary <i className="ion-ios-ribbon box-margin-left-small" /> 35</div>
           </div>
           <div className="box-text-3 box-textGray box-margin-right-small">active<span className="box-textBold box-margin-left-small">8 hrs ago</span></div>
         </div>
@@ -41,7 +41,7 @@ class AccountFollowings extends React.Component {
           <div className="a-followingImgWrapper"><img className="a-followingImg" src={Logo} alt='Profile' /></div>
           <div className="a-fName box-spacer">
             <div className="box-text-2 box-textBold">Username</div>
-            <div className="box-text-3 box-textCaps box-textBold box-textGray">Legendary</div>
+            <div className="box-text-3 box-textCaps box-textBold box-textGray">Legendary <i className="ion-ios-ribbon box-margin-left-small" /> 35</div>
           </div>
           <div className="box-text-3 box-textGray box-margin-right-small">active<span className="box-textBold box-margin-left-small">8 hrs ago</span></div>
         </div>
@@ -49,7 +49,7 @@ class AccountFollowings extends React.Component {
           <div className="a-followingImgWrapper"><img className="a-followingImg" src={Logo} alt='Profile' /></div>
           <div className="a-fName box-spacer">
             <div className="box-text-2 box-textBold">Username</div>
-            <div className="box-text-3 box-textCaps box-textBold box-textGray">Legendary</div>
+            <div className="box-text-3 box-textCaps box-textBold box-textGray">Legendary <i className="ion-ios-ribbon box-margin-left-small" /> 35</div>
           </div>
           <div className="box-text-3 box-textGray box-margin-right-small">active<span className="box-textBold box-margin-left-small">8 hrs ago</span></div>
         </div>
@@ -57,7 +57,7 @@ class AccountFollowings extends React.Component {
           <div className="a-followingImgWrapper"><img className="a-followingImg" src={Logo} alt='Profile' /></div>
           <div className="a-fName box-spacer">
             <div className="box-text-2 box-textBold">Username</div>
-            <div className="box-text-3 box-textCaps box-textBold box-textGray">Legendary</div>
+            <div className="box-text-3 box-textCaps box-textBold box-textGray">Legendary <i className="ion-ios-ribbon box-margin-left-small" /> 35</div>
           </div>
           <div className="box-text-3 box-textGray box-margin-right-small">active<span className="box-textBold box-margin-left-small">8 hrs ago</span></div>
         </div>

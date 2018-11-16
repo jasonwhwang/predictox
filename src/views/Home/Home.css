@@ -79,40 +79,52 @@
   margin-Right: 1.25rem;
 }
 
-.h-details {
-  height: 100%;
-  margin: 0.5rem 1rem;
-  border-radius: 25px;
-  padding: 1rem 1.5rem 1.5rem 1.5rem;
-  background-color: white;
-  text-align: center;
-}
-
-.h-detailsnumbers {
-  margin-top: 0.5rem;
-  display: flex;
-  flex-direction: row;
-}
-.h-detailsblock { 
-  flex: 1;
-}
-
-.h-bottomsection {
-  display: flex;
-  flex-direction: row;
-}
-.h-bottomsectionmargin {
-  margin: 2rem 2rem 0 2rem;
-}
-.h-bottomflex {
-  flex: 1;
+.h-date {
   display: flex;
   flex-direction: column;
-  margin: 0 0.5rem;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  background-color: var(--graybackground);
+  border-bottom: 1px solid var(--border);
+  box-sizing: border-box;
+}
+.h-dateButton {
+  font-size: 1.1rem;
+  font-weight: 700;
+  width: 100%;
+  height: 100%;
 }
 
-.h-tablemargin {
-  margin: 0 1rem;
+.h-homeList {
+  height: 100%;
+}
+#h-toggle0 {
+  background-color: var(--darkgray);
+}
+.h-containerMargins {
+  height: calc(100% - 100px);
+  padding: 0 1rem;
+  overflow: auto;
+}
+.h-predictionLabel {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  background-color: var(--graybackground);
+  border: 1px solid var(--border);
+  box-sizing: border-box;
+  border-radius: 30px;
+  padding: 0 1.5rem;
+  margin-bottom: 1rem;
+}
+.h-pLabelText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media only screen and (min-width: 600px) {

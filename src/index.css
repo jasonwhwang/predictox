@@ -136,6 +136,9 @@ button, [type="button"], [type="reset"], [type="submit"] {
 .box-margin-left-space {
   margin-left: 0.2rem;
 }
+.box-margin-right-medium {
+  margin-right: 1rem;
+}
 .box-margin-right-small {
   margin-right: 0.5rem;
 }

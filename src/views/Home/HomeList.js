@@ -1,5 +1,6 @@
 import React from 'react';
 import './Home.css';
+import Logo from '../../img/predicto.png';
 
 import { connect } from 'react-redux';
 
@@ -17,88 +18,135 @@ class HomeList extends React.Component {
   }
 
   setTab(t) {
+    document.getElementById("h-toggle" + this.state.tab).style.backgroundColor = "transparent";
+    document.getElementById("h-toggle" + t).style.backgroundColor = "var(--darkgray)";
     this.setState({ tab: t });
-  }
-  setCrypto(c) {
-    this.setState({ crypto: c });
   }
 
   render() {
     return (
-      <div>
-        <div className="h-details">
-          <div className="box-heading-1">November 7, 2018</div>
-          <div className="h-detailsnumbers">
-            <div className="h-detailsblock">
-              <div className="box-heading-big">$6500</div>
-              <div className="box-heading-mini">Average Prediction</div>
+      <div className="h-homeList">
+        <div className="h-date">
+          <button className="h-dateButton">November 7</button>
+        </div>
+        <div className="a-detailsSection">
+          <div className="a-detailsFlex">
+            <div className="" onClick={() => this.setTab(0)}>
+              <span className="box-heading-3">Predictions</span>
+              <div className="a-detailsToggle" id="h-toggle0"></div>
             </div>
-            <div className="h-detailsblock">
-              <div className="box-heading-big">500</div>
-              <div className="box-heading-mini">Total Predictions</div>
+          </div>
+          <div className="a-detailsFlex">
+            <div className="" onClick={() => this.setTab(1)}>
+              <span className="box-heading-3">Users</span>
+              <div className="a-detailsToggle" id="h-toggle1"></div>
             </div>
-            <div className="h-detailsblock">
-              <div className="box-heading-big">$3500P</div>
-              <div className="box-heading-mini">Total Investment</div>
+          </div>
+          <div className="a-detailsFlex">
+            <div className="" onClick={() => this.setTab(2)}>
+              <span className="box-heading-3">Discussions</span>
+              <div className="a-detailsToggle" id="h-toggle2"></div>
             </div>
           </div>
         </div>
-
-
-        <div className="h-bottomsection h-bottomsectionmargin">
-          <div className="h-bottomflex">
-            <input className="tabs" id="homepredictions" type="radio" name="tabs" defaultChecked={true} />
-            <label className="userselect" htmlFor="homepredictions" onClick={() => this.setTab(0)}>
-              <span className="userselect-name">Predictions</span>
-            </label>
-          </div>
-          <div className="h-bottomflex">
-            <input className="tabs" id="homemodels" type="radio" name="tabs" />
-            <label className="userselect" htmlFor="homemodels" onClick={() => this.setTab(1)}>
-              <span className="userselect-name">Top Users</span>
-            </label>
-          </div>
-          <div className="h-bottomflex">
-            <input className="tabs" id="homeusers" type="radio" name="tabs" />
-            <label className="userselect" htmlFor="homeusers" onClick={() => this.setTab(2)}>
-              <span className="userselect-name">Discussions</span>
-            </label>
-          </div>
-        </div>
-
         {
           this.state.tab === 0 ?
-            <div className="predictionranking-table h-tablemargin">
-              <table className="">
-                <thead>
-                  <tr>
-                    <th className="uk-width-small text-middle">Prediction</th>
-                    <th className="uk-width-small text-middle"><button>Total <i className="ion-ios-arrow-down"></i></button></th>
-                    <th className="uk-width-small text-middle"><button>Odds <i className="ion-ios-arrow-down"></i></button></th>
-                    <th className="uk-width-small text-middle"><button>Stakes <i className="ion-ios-arrow-down"></i></button></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="text-middle">$7,000</td>
-                    <td className="text-middle">500</td>
-                    <td className="text-middle">3 : 5</td>
-                    <td className="text-middle">$1000</td>
-                  </tr>
-                  <tr>
-                    <td className="text-middle">$7,200</td>
-                    <td className="text-middle">400</td>
-                    <td className="text-middle">3 : 5</td>
-                    <td className="text-middle">$750</td>
-                  </tr>
-                  <tr>
-                    <td className="text-middle">$7,500</td>
-                    <td className="text-middle">350</td>
-                    <td className="text-middle">3 : 5</td>
-                    <td className="text-middle">$500</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div className="h-containerMargins">
+              <div className="h-predictionLabel">
+                <div className="h-pLabelText box-margin-left-medium">
+                  <div className="box-text-2 box-textBold">$6,500</div>
+                  <div className="box-text-3 box-textGray">Average</div>
+                </div>
+                <div className="h-pLabelText">
+                  <div className="box-text-2 box-textBold">550</div>
+                  <div className="box-text-3 box-textGray">Total</div>
+                </div>
+                <div className="h-pLabelText box-margin-right-medium">
+                  <div className="box-text-2 box-textBold">$3,700</div>
+                  <div className="box-text-3 box-textGray">Stakes</div>
+                </div>
+              </div>
+              <div className="a-tableWidth box-textCenter a-tableHeader">
+                <div className="box-spacer box-textGray box-text-3">Prediction</div>
+                <div className="box-spacer box-textGray box-text-3">Total</div>
+                <div className="box-spacer box-textGray box-text-3">Odds</div>
+                <div className="box-spacer box-textGray box-text-3">Stakes</div>
+              </div>
+              <div className="a-tableBody">
+                <div className="a-tableWidth box-textCenter a-cell">
+                  <div className="box-spacer box-text-2">$7,000</div>
+                  <div className="box-spacer box-text-2">300</div>
+                  <div className="box-spacer box-text-2">3:5</div>
+                  <div className="box-spacer box-text-2">$2500</div>
+                </div>
+                <div className="a-tableWidth box-textCenter a-cell">
+                  <div className="box-spacer box-text-2">$6,500</div>
+                  <div className="box-spacer box-text-2">150</div>
+                  <div className="box-spacer box-text-2">3:5</div>
+                  <div className="box-spacer box-text-2">$700</div>
+                </div>
+                <div className="a-tableWidth box-textCenter a-cell">
+                  <div className="box-spacer box-text-2">$6,000</div>
+                  <div className="box-spacer box-text-2">100</div>
+                  <div className="box-spacer box-text-2">3:5</div>
+                  <div className="box-spacer box-text-2">$500</div>
+                </div>
+              </div>
+            </div>
+            :
+            null
+        }
+        {
+          this.state.tab === 1 ?
+            <div className="h-containerMargins">
+              <div className="a-followingUser">
+                <div className="a-followingImgWrapper"><img className="a-followingImg" src={Logo} alt='Profile' /></div>
+                <div className="a-fName box-spacer">
+                  <div className="box-text-2 box-textBold">Username</div>
+                  <div className="box-text-3 box-textCaps box-textBold box-textGray">Legendary <i className="ion-ios-ribbon box-margin-left-small" /> 35</div>
+                </div>
+                <div className="box-text-3 box-textGray box-margin-right-small">Prediction:<span className="box-textBold box-margin-left-small">$6,700</span></div>
+              </div>
+              <div className="a-followingUser">
+                <div className="a-followingImgWrapper"><img className="a-followingImg" src={Logo} alt='Profile' /></div>
+                <div className="a-fName box-spacer">
+                  <div className="box-text-2 box-textBold">Username</div>
+                  <div className="box-text-3 box-textCaps box-textBold box-textGray">Legendary <i className="ion-ios-ribbon box-margin-left-small" /> 35</div>
+                </div>
+                <div className="box-text-3 box-textGray box-margin-right-small">Prediction:<span className="box-textBold box-margin-left-small">$6,700</span></div>
+              </div>
+              <div className="a-followingUser">
+                <div className="a-followingImgWrapper"><img className="a-followingImg" src={Logo} alt='Profile' /></div>
+                <div className="a-fName box-spacer">
+                  <div className="box-text-2 box-textBold">Username</div>
+                  <div className="box-text-3 box-textCaps box-textBold box-textGray">Legendary <i className="ion-ios-ribbon box-margin-left-small" /> 35</div>
+                </div>
+                <div className="box-text-3 box-textGray box-margin-right-small">Prediction:<span className="box-textBold box-margin-left-small">$6,700</span></div>
+              </div>
+              <div className="a-followingUser">
+                <div className="a-followingImgWrapper"><img className="a-followingImg" src={Logo} alt='Profile' /></div>
+                <div className="a-fName box-spacer">
+                  <div className="box-text-2 box-textBold">Username</div>
+                  <div className="box-text-3 box-textCaps box-textBold box-textGray">Legendary <i className="ion-ios-ribbon box-margin-left-small" /> 35</div>
+                </div>
+                <div className="box-text-3 box-textGray box-margin-right-small">Prediction:<span className="box-textBold box-margin-left-small">$6,700</span></div>
+              </div>
+              <div className="a-followingUser">
+                <div className="a-followingImgWrapper"><img className="a-followingImg" src={Logo} alt='Profile' /></div>
+                <div className="a-fName box-spacer">
+                  <div className="box-text-2 box-textBold">Username</div>
+                  <div className="box-text-3 box-textCaps box-textBold box-textGray">Legendary <i className="ion-ios-ribbon box-margin-left-small" /> 35</div>
+                </div>
+                <div className="box-text-3 box-textGray box-margin-right-small">Prediction:<span className="box-textBold box-margin-left-small">$6,700</span></div>
+              </div>
+              <div className="a-followingUser">
+                <div className="a-followingImgWrapper"><img className="a-followingImg" src={Logo} alt='Profile' /></div>
+                <div className="a-fName box-spacer">
+                  <div className="box-text-2 box-textBold">Username</div>
+                  <div className="box-text-3 box-textCaps box-textBold box-textGray">Legendary <i className="ion-ios-ribbon box-margin-left-small" /> 35</div>
+                </div>
+                <div className="box-text-3 box-textGray box-margin-right-small">Prediction:<span className="box-textBold box-margin-left-small">$6,700</span></div>
+              </div>
             </div>
             :
             null

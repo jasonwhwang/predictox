@@ -11,6 +11,7 @@
 }
 .header-toggle {
   margin-left: 6px;
+  margin-right: 60px;
   width: 50px;
   display: flex;
   flex-direction: row;

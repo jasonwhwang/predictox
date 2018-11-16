@@ -9,8 +9,7 @@ class Account extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tab: 0,
-      crypto: 0
+      tab: 0
     }
   }
 
@@ -18,9 +17,6 @@ class Account extends React.Component {
     document.getElementById("a-toggle" + this.state.tab).style.backgroundColor = "transparent";
     document.getElementById("a-toggle" + t).style.backgroundColor = "var(--darkgray)";
     this.setState({ tab: t });
-  }
-  setCrypto(c) {
-    this.setState({ crypto: c });
   }
 
   render() {
@@ -33,9 +29,9 @@ class Account extends React.Component {
               <div className="box-heading-1">Username</div>
               <div className="box-text-3 box-textCaps box-textBold box-textGray">Legendary</div>
               <div className="a-iconsMargin a-verticalAlign box-textGray">
-                <i className="ion-md-locate" /><span className="box-text-3 box-textBold box-margin-left-space">85</span>
+                <i className="ion-ios-ribbon" /><span className="box-text-3 box-textBold box-margin-left-space">35</span>                
+                <i className="ion-md-locate box-margin-left-medium" /><span className="box-text-3 box-textBold box-margin-left-space">85</span>
                 <i className="ion-md-arrow-round-up box-margin-left-medium" /><span className="box-text-3 box-textBold box-margin-left-space">1800<span className="box-text-3">%</span></span>
-                <i className="ion-ios-ribbon box-margin-left-medium" /><span className="box-text-3 box-textBold box-margin-left-space">35</span>
               </div>
             </div>
             <div className="a-follow">
@@ -48,19 +44,19 @@ class Account extends React.Component {
           <div className="a-detailsSection">
             <div className="a-detailsFlex">
               <div className="" onClick={() => this.setTab(0)}>
-                <span>80 </span><span className="box-heading-3">Predictions</span>
+                <span className="box-heading-3">Predictions</span>
                 <div className="a-detailsToggle" id="a-toggle0"></div>
               </div>
             </div>
             <div className="a-detailsFlex">
               <div className="" onClick={() => this.setTab(1)}>
-                <span>20 </span><span className="box-heading-3">Discussions</span>
+                <span className="box-heading-3">Discussions</span>
                 <div className="a-detailsToggle" id="a-toggle1"></div>
               </div>
             </div>
             <div className="a-detailsFlex">
               <div className="" onClick={() => this.setTab(2)}>
-                <span>15 </span><span className="box-heading-3">Following</span>
+                <span className="box-heading-3">Following</span>
                 <div className="a-detailsToggle" id="a-toggle2"></div>
               </div>
             </div>

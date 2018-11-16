@@ -8,7 +8,7 @@ class Chart extends React.Component {
         <VictoryChart
           width={window.innerWidth * 1.575}
           height={window.innerHeight * 1.4}
-          domain={{ x: [0, 14], y: [6000, 6600] }}
+          domain={{ x: [1, 13], y: [6000, 6600] }}
           containerComponent={<VictoryZoomContainer allowZoom={false} zoomDomain={{ x: [4, 10] }} />}
         >
           <VictoryAxis dependentAxis
