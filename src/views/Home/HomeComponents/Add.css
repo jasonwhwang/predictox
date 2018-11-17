@@ -27,7 +27,7 @@
 }
 
 .h-addDate {
-  height: 50px;
+  height: 30px;
   width: 100%;
   text-align: center;
 }
@@ -44,4 +44,7 @@
 }
 .h-addButton {
   width: 100px;
+}
+.h-flexCenter {
+  justify-content: space-evenly;
 }
