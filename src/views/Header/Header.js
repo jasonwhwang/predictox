@@ -21,8 +21,8 @@ class Header extends React.Component {
   }
 
   toggleSidebar() {
-    if (document.getElementById("mainSidebar").style.transform === "translateX(0px)") {
-      document.getElementById("mainSidebar").style.transform = "translateX(-300px)";
+    if (document.getElementById("mainSidebar").style.marginLeft === "0px") {
+      document.getElementById("mainSidebar").style.marginLeft = "-300px";
     } else {
       if (document.getElementById("mainRightbar").style.marginRight === "0px") {
         if (window.innerWidth > 600) {
@@ -31,7 +31,7 @@ class Header extends React.Component {
           document.getElementById("mainRightbar").style.marginRight = "-100vw";
         }
       }
-      document.getElementById("mainSidebar").style.transform = "translateX(0px)";
+      document.getElementById("mainSidebar").style.marginLeft = "0px";
     }
   }
 

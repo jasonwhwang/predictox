@@ -22,8 +22,6 @@
 }
 
 .h-coin {
-  display: flex;
-  flex-direction: row;
   height: 80px;
   width: 100%;
   position: absolute;
@@ -36,26 +34,16 @@
   margin-left: 1.25rem;
 }
 .h-coinselectflex {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
   font-size: 1.5rem;
   color: gold;
   border-radius: 20px;
   box-sizing: border-box;
   height: 100%;
 }
-.h-coinselectflex:hover {
-  color: goldenrod;
-}
 .h-coinicon {
-  display: flex;
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  align-items: center;
-  vertical-align: middle;
   font-size: 1.5rem;
   color: white;
   background-color: gold;
@@ -70,20 +58,11 @@
   font-weight: 600;
   font-size: 1.75rem;
 }
-.h-predict {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
 .h-marginRight {
   margin-Right: 1.25rem;
 }
 
 .h-date {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 50px;
   background-color: var(--graybackground);
   border-bottom: 1px solid var(--border);

@@ -24,7 +24,7 @@ class Account extends React.Component {
       <div className="account">
         <div className="a-profile">
           <div className="a-profileFlex box-margin-bottom-small">
-            <div className="a-profileImg"><img className="a-imgStyle" src={Logo} alt='Profile' /></div>
+            <div className="a-profileImg box-flexRow"><img className="a-imgStyle" src={Logo} alt='Profile' /></div>
             <div className="a-profileText">
               <div className="box-heading-1">Username</div>
               <div className="box-text-3 box-textCaps box-textBold box-textGray">Legendary</div>

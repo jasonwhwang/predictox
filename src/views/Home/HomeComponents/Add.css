@@ -1,0 +1,47 @@
+.h-modal {
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  z-index: 1;
+  height: calc(100vh - 130px);
+  width: 100vw;
+}
+
+.h-modalContainer {
+  height: 50vh;
+  width: 80%;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background-color: var(--graybackground);
+  margin: 0 auto;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.h-modalItem {
+  height: 100px;
+  border-bottom: 1px solid var(--border);
+  box-sizing: border-box;
+}
+.h-modalItemLeftMargin {
+  margin-left: 30px;
+}
+
+.h-addDate {
+  height: 50px;
+  width: 100%;
+  text-align: center;
+}
+.h-addHeight {
+  height: 50px;
+  width: 150px;
+  font-size: 1.2rem;
+}
+.h-addMarginTopBig {
+  margin-top: 2rem;
+}
+.h-addMarginTopSmall {
+  margin-top: 0.5rem;
+}
+.h-addButton {
+  width: 100px;
+}

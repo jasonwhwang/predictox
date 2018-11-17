@@ -1,8 +1,8 @@
 import React from 'react';
-import './Home.css';
-import Logo from '../../img/predicto.png';
+import Logo from '../../../img/predicto.png';
 
 import { connect } from 'react-redux';
+import HomeDate from './HomeDate';
 
 const mapStateToProps = state => ({
 
@@ -13,8 +13,9 @@ class HomeList extends React.Component {
     super(props);
     this.state = {
       tab: 0,
-      crypto: 0
+      date: 0
     }
+    this.dateToggle = this.dateToggle.bind(this);
   }
 
   setTab(t) {
@@ -22,12 +23,21 @@ class HomeList extends React.Component {
     document.getElementById("h-toggle" + t).style.backgroundColor = "var(--darkgray)";
     this.setState({ tab: t });
   }
+  dateToggle() {
+    this.setState({ date: this.state.date === 0 ? 1 : 0 });
+  }
 
   render() {
     return (
       <div className="h-homeList">
+        {
+          this.state.date === 1 ?
+          <HomeDate dateToggle={this.dateToggle} />
+          :
+          null
+        }
         <div className="h-date">
-          <button className="h-dateButton">November 7</button>
+          <button className="h-dateButton" onClick={this.dateToggle}>November 7</button>
         </div>
         <div className="a-detailsSection">
           <div className="a-detailsFlex">
@@ -37,15 +47,15 @@ class HomeList extends React.Component {
             </div>
           </div>
           <div className="a-detailsFlex">
-            <div className="" onClick={() => this.setTab(1)}>
-              <span className="box-heading-3">Users</span>
-              <div className="a-detailsToggle" id="h-toggle1"></div>
-            </div>
-          </div>
-          <div className="a-detailsFlex">
             <div className="" onClick={() => this.setTab(2)}>
               <span className="box-heading-3">Discussions</span>
               <div className="a-detailsToggle" id="h-toggle2"></div>
+            </div>
+          </div>
+          <div className="a-detailsFlex">
+            <div className="" onClick={() => this.setTab(1)}>
+              <span className="box-heading-3">Users</span>
+              <div className="a-detailsToggle" id="h-toggle1"></div>
             </div>
           </div>
         </div>
@@ -146,6 +156,49 @@ class HomeList extends React.Component {
                   <div className="box-text-3 box-textCaps box-textBold box-textGray">Legendary <i className="ion-ios-ribbon box-margin-left-small" /> 35</div>
                 </div>
                 <div className="box-text-3 box-textGray box-margin-right-small">Prediction:<span className="box-textBold box-margin-left-small">$6,700</span></div>
+              </div>
+            </div>
+            :
+            null
+        }
+        {
+          this.state.tab === 2 ?
+            <div className="h-containerMargins">
+              <div className="a-discussionGroup">
+                <div className="a-discussionRating">
+                  <button><i className="ion-ios-arrow-dropup box-text-2 box-textGray" /></button>
+                  <div className="box-text-2 a-ratingMargin">100</div>
+                  <button><i className="ion-ios-arrow-dropdown box-text-2 box-textGray" /></button>
+                </div>
+                <div className="a-discussionDetails box-spacer">
+                  <div className="a-discussionTitle box-text-2">Discussion Title</div>
+                  <div className="a-discussionBody box-textGray">Discussion Body - This text will display the text made by the user. This text will be any kind of news for anything that the user can think of</div>
+                </div>
+                <div className="a-discussionTime box-text-3 box-textGray">Time</div>
+              </div>
+              <div className="a-discussionGroup">
+                <div className="a-discussionRating">
+                  <button><i className="ion-ios-arrow-dropup box-text-2 box-textGray" /></button>
+                  <div className="box-text-2 a-ratingMargin">100</div>
+                  <button><i className="ion-ios-arrow-dropdown box-text-2 box-textGray" /></button>
+                </div>
+                <div className="a-discussionDetails box-spacer">
+                  <div className="a-discussionTitle box-text-2">Discussion Title</div>
+                  <div className="a-discussionBody box-textGray">Discussion Body - This text will display the text made by the user. This text will be any kind of news for anything that the user can think of</div>
+                </div>
+                <div className="a-discussionTime box-text-3 box-textGray">Time</div>
+              </div>
+              <div className="a-discussionGroup">
+                <div className="a-discussionRating">
+                  <button><i className="ion-ios-arrow-dropup box-text-2 box-textGray" /></button>
+                  <div className="box-text-2 a-ratingMargin">100</div>
+                  <button><i className="ion-ios-arrow-dropdown box-text-2 box-textGray" /></button>
+                </div>
+                <div className="a-discussionDetails box-spacer">
+                  <div className="a-discussionTitle box-text-2">Discussion Title</div>
+                  <div className="a-discussionBody box-textGray">Discussion Body - This text will display the text made by the user. This text will be any kind of news for anything that the user can think of</div>
+                </div>
+                <div className="a-discussionTime box-text-3 box-textGray">Time</div>
               </div>
             </div>
             :
