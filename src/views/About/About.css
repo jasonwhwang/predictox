@@ -1,0 +1,13 @@
+.a-body {
+  padding: 1rem;
+  height: calc(100vh - 50px);
+  box-sizing: border-box;
+  line-height: 2rem;
+  font-size: 1.5rem;
+}
+
+.a-logo {
+  height: 150px;
+  width: 150px;
+  margin: 2rem 0 5rem 0;
+}

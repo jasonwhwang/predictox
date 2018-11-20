@@ -16,7 +16,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: 100vh;
   min-height: 100vh;
   font-family: 'Lato', sans-serif;
   -webkit-tap-highlight-color: transparent;
@@ -173,20 +173,20 @@ button, [type="button"], [type="reset"], [type="submit"] {
 
 @media only screen and (min-width: 600px) {
   /* Scrollbar Styles */
-  /* div::-webkit-scrollbar-track
+  div::-webkit-scrollbar-track
   {
-    width: 10px;
-    margin: 50px 0 2px 0;
+    width: 8px;
+    margin: 2px 0 2px 0;
   }
   div::-webkit-scrollbar
   {
     height: 8px;
-    width: 10px;
+    width: 8px;
   }
   div::-webkit-scrollbar-thumb
   {
-    border-radius: 5px;
+    border-radius: 4px;
     background-color: var(--gray);
     border-right: 2px solid white;
-  } */
+  }
 }

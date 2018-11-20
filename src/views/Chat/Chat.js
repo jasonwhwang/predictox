@@ -11,7 +11,7 @@ class Chat extends React.Component {
         <WidgetBot
           server="512149626128957450"
           channel="512149626128957454"
-          shard="https://cl2.widgetbot.io"
+          shard="https://cl1.widgetbot.io"
           height={height}
           width={width}
           onAPI={(api) => {
