@@ -28,6 +28,7 @@ class Home extends React.Component {
     this.toggleGraph = this.toggleGraph.bind(this);
     this.toggleAdd = this.toggleAdd.bind(this);
     this.toggleSelect = this.toggleSelect.bind(this);
+    this.setDimensions = this.setDimensions.bind(this);
   }
 
   toggleGraph() {
@@ -40,7 +41,17 @@ class Home extends React.Component {
     this.setState({ select: this.state.select === 0 ? 1 : 0, add: 0 });
   }
 
+  setDimensions() {
+    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    document.getElementsByTagName("html")[0].style.height = h+"px";
+    document.getElementsByTagName("html")[0].style.width = w+"px";
+    document.body.style.height = h+"px";
+    document.body.style.width = w+"px";
+  }
+
   render() {
+    this.setDimensions();
     return (
       <div className="home">
         {
